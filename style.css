@@ -1,0 +1,87 @@
+/* This css is for full webpage */
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #2c3e50;
+    align-items: center;
+    color: white;
+
+}
+/* This css is to style button */
+button{
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #27ae60;
+}
+
+.game-board{
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 15px;
+margin: 20px;
+max-width: 600px;
+}
+
+.controls{
+   /* max-width: 20px; */
+   text-align: center;
+   color: white;
+}
+.card{
+    width: 100px;
+    height: 100px;
+    background: #3498db;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.card-front, .card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    font-size: 2em;
+}
+
+.card-front{
+    background: #2980b9;
+    transform: rotateY(0deg);
+
+}
+.card-back{
+    background: #fff;
+    transform: rotateY(180deg);
+
+}
+.flipped{
+    transform: rotateY(180deg);
+
+}
+.matched{
+    background: #2ecc71;
+    cursor: default;
+}
+/* .button{
+    padding: 10px 20px;
+    font-size: 1em;
+    background: #27ae60;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+
+} */
+
+button:hover{
+    background:  #219a52;
+}
